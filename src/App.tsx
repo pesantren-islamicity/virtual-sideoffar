@@ -1342,11 +1342,15 @@ export default function App() {
                                         data-testid={`timer-preset-${minutes}m`}
                                         type="button"
                                         onClick={() => startPresetTimer(minutes)}
-                                        className="flex items-center justify-center gap-1 py-1.5 px-2 rounded-lg bg-amber-500/10 dark:bg-amber-500/15 hover:bg-amber-500/20 dark:hover:bg-amber-500/25 text-amber-700 dark:text-amber-300 border border-amber-300/60 dark:border-amber-700/60 hover:border-amber-400 font-bold text-xs cursor-pointer transition-all hover:scale-[1.02] active:scale-95 group"
+                                        className="flex flex-col items-center justify-center py-2 px-1 rounded-xl bg-amber-500/10 dark:bg-amber-500/15 hover:bg-amber-500/20 dark:hover:bg-amber-500/25 text-amber-700 dark:text-amber-300 border border-amber-300/60 dark:border-amber-700/60 hover:border-amber-400 cursor-pointer transition-all hover:scale-[1.02] active:scale-95 group shadow-xs"
                                         title={`Start ${minutes}m timer instantly`}
                                       >
-                                        <Zap className="w-3 h-3 text-amber-500 group-hover:scale-110 transition-transform" />
-                                        <span>{minutes}m</span>
+                                        <div className="p-1 rounded-full bg-amber-500/15 dark:bg-amber-500/25 group-hover:bg-amber-500/25 transition-colors mb-0.5">
+                                          <Zap className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400 group-hover:scale-110 transition-transform" />
+                                        </div>
+                                        <span className="text-[11px] font-bold text-amber-800 dark:text-amber-200 leading-none">
+                                          {minutes}m
+                                        </span>
                                       </button>
                                     ))}
                                   </div>
